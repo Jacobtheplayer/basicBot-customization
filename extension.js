@@ -35,14 +35,14 @@
          */
 
         bot.commands.baconCommand = {
-            command: 'bacon',  //The command to be called. With the standard command literal this would be: !bacon
+            command: 'ip',  //The command to be called. With the standard command literal this would be: !bacon
             rank: 'user', //Minimum user permission to use the command
             type: 'exact', //Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
             functionality: function (chat, cmd) {
                 if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                 if (!bot.commands.executable(this.rank, chat)) return void (0);
                 else {
-                    API.sendChat("/me Bacon!!!");
+                    API.sendChat("/me The EclipseCraft server ip is: 109.167.58.86");
                 }
             }
         };
@@ -92,7 +92,7 @@
         afkRankCheck: "ambassador",
         motdEnabled: false,
         motdInterval: 5,
-        motd: "Temporary Message of the Day",
+        motd: "It's OVER 9000!!! Welcome to the EclipseCraft Plug dj Have fun!",
         filterChat: true,
         etaRestriction: false,
         welcome: true,
@@ -101,7 +101,7 @@
         themeLink: null,
         fbLink: null,
         youtubeLink: null,
-        website: null,
+        website: http://thelegitgamingserver.enjin.com/,
         intervalMessages: [],
         messageInterval: 5,
         songstats: true,
